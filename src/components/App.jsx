@@ -14,7 +14,7 @@ function App() {
     const savedFeedback = localStorage.getItem("feedback");
 
     if (savedFeedback !== null) {
-      return savedFeedback;
+      return JSON.parse(savedFeedback);
     }
     return JSON.stringify(noFeedbackObj);
   });
