@@ -36,6 +36,13 @@ function App() {
       bad: rating.bad + 1,
     });
   };
+  const updateFeedback = (rating) => {
+    setRating({
+      good: rating.good,
+      neutral: rating.neutral,
+      bad: rating.bad,
+    });
+  };
   return (
     <>
       <Description />
@@ -45,7 +52,7 @@ function App() {
         onBad={handleBad}
         onReset={handleReset}
       />
-      <Options value={rating} />
+      <Options value={updateFeedback} />
     </>
   );
 }
