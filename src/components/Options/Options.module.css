@@ -1,6 +1,7 @@
 .options {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 .button {
   background-color: #daaa83;
