@@ -23,7 +23,7 @@ function App() {
     <>
       <Description />
       <Options updateFeedback={updateFeedback} />
-      {totalFeedback !== 0 ? Notification : <Feedback value={rating} />}
+      {totalFeedback !== 0 ? <Feedback value={rating} /> : Notification}
     </>
   );
 }
