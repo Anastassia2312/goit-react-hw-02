@@ -10,7 +10,7 @@ function App() {
     neutral: 0,
     bad: 0,
   });
-  const handleGood = () => {
+  /*const handleGood = () => {
     setRating({
       ...rating,
       good: rating.good + 1,
@@ -35,24 +35,18 @@ function App() {
       ...rating,
       bad: rating.bad + 1,
     });
-  };
-  const updateFeedback = (rating) => {
-    setRating({
-      good: rating.good,
-      neutral: rating.neutral,
-      bad: rating.bad,
-    });
+  };*/
+  const updateFeedback = (feedbackType) => {
+    setRating((feedback) => ({
+      ...feedback,
+      [feedbackType]: feedback[feedbackType] + 1,
+    }));
   };
   return (
     <>
       <Description />
-      <Feedback
-        onGood={handleGood}
-        onNeutral={handleNeutral}
-        onBad={handleBad}
-        onReset={handleReset}
-      />
-      <Options value={updateFeedback} />
+      <Options updateFeedback={updateFeedback} />
+      <Feedback />
     </>
   );
 }

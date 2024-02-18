@@ -1,10 +1,9 @@
-export default function Feedback({ onGood, onNeutral, onBad, onReset }) {
+export default function Options({ value }) {
   return (
     <div>
-      <button onClick={onGood}>Good</button>
-      <button onClick={onNeutral}>Neutral</button>
-      <button onClick={onBad}>Bad</button>
-      <button onClick={onReset}>Reset</button>
+      <p>Good: {value}</p>
+      <p>Neutral: {value}</p>
+      <p>Bad: {value}</p>
     </div>
   );
 }

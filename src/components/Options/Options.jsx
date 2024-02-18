@@ -1,9 +1,9 @@
-export default function Options({ value }) {
+export default function Feedback({ updateFeedback }) {
   return (
     <div>
-      <p>Good: {value}</p>
-      <p>Neutral: {value}</p>
-      <p>Bad: {value}</p>
+      <button onClick={() => updateFeedback("good")}>Good</button>
+      <button onClick={() => updateFeedback("neutral")}>Neutral</button>
+      <button onClick={() => updateFeedback("bad")}>Bad</button>
     </div>
   );
 }
