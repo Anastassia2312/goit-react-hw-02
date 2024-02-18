@@ -4,7 +4,11 @@ import Description from "./Description/Description";
 import Feedback from "./Feedback/Feedback";
 import Options from "./Options/Options";
 import Notification from "./Notification/Notification";
-
+const noFeedbackObj = {
+  good: 0,
+  neutral: 0,
+  bad: 0,
+};
 function App() {
   const [rating, setRating] = useState(() => {
     const savedFeedback = localStorage.getItem("feedback");
@@ -12,11 +16,7 @@ function App() {
     if (savedFeedback !== null) {
       return savedFeedback;
     }
-    return JSON.stringify({
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    });
+    return JSON.stringify(noFeedbackObj);
   });
   const updateFeedback = (feedbackType) => {
     setRating((feedback) => ({
