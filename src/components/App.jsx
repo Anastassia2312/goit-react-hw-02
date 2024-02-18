@@ -26,6 +26,9 @@ function App() {
     });
   };
   const totalFeedback = rating.good + rating.neutral + rating.bad;
+  const positiveFeedback = Math.round(
+    ((rating.good + rating.neutral) / totalFeedback) * 100
+  );
 
   return (
     <>
@@ -35,7 +38,15 @@ function App() {
         onReset={handleReset}
         updateFeedback={updateFeedback}
       />
-      {totalFeedback !== 0 ? <Feedback value={rating} /> : <Notification />}
+      {totalFeedback !== 0 ? (
+        <Feedback
+          totalFeedback={totalFeedback}
+          positiveFeedback={positiveFeedback}
+          value={rating}
+        />
+      ) : (
+        <Notification />
+      )}
     </>
   );
 }
