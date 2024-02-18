@@ -12,11 +12,11 @@ function App() {
     if (savedFeedback !== null) {
       return savedFeedback;
     }
-    return {
+    return JSON.stringify({
       good: 0,
       neutral: 0,
       bad: 0,
-    };
+    });
   });
   const updateFeedback = (feedbackType) => {
     setRating((feedback) => ({
