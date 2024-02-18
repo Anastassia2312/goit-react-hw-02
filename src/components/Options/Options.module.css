@@ -1,0 +1,10 @@
+.options {
+  display: flex;
+  gap: 8px;
+}
+.button {
+  background-color: #daaa83;
+}
+.button:hover {
+  background-color: rgb(124, 93, 56);
+}
