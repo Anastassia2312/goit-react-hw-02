@@ -1,9 +1,9 @@
 export default function Options({ value }) {
   return (
     <div>
-      <p>Good: {value}</p>
-      <p>Neutral: {value}</p>
-      <p>Bad: {value}</p>
+      <p>Good: {value.good}</p>
+      <p>Neutral: {value.neutral}</p>
+      <p>Bad: {value.bad}</p>
     </div>
   );
 }

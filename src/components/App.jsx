@@ -46,7 +46,7 @@ function App() {
     <>
       <Description />
       <Options updateFeedback={updateFeedback} />
-      <Feedback />
+      <Feedback value={rating} />
     </>
   );
 }
